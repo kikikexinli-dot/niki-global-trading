@@ -175,3 +175,23 @@ footer { border-top: 1px solid var(--line); margin-top: 60px; padding: 32px 0; c
   .hero { padding: 48px 0 32px; }
   .value-strip { padding: 28px; }
 }
+.hero-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero-img img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+/* 手机端自动变成上下排列 */
+@media(max-width:768px){
+  .hero-row {
+    grid-template-columns: 1fr;
+  }
+  .hero-img {
+    margin-top:24px;
+  }
+}

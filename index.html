@@ -262,5 +262,39 @@
     });
   });
 </script>
+<style>
+.product-media {
+  position:relative;
+  overflow:hidden;
+}
+.card-img, .card-video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:opacity 0.3s;
+}
+.card-video{
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+}
+.product-media:hover .card-img,
+.product-media.active .card-img{opacity:0;}
+.product-media:hover .card-video,
+.product-media.active .card-video{opacity:1;}
+</style>
+<script>
+document.querySelectorAll('.product-media').forEach(item=>{
+  item.onclick = function(){
+    this.classList.toggle('active');
+    const v = this.querySelector('video');
+    if(v){
+      if(this.classList.contains('active')) v.play();
+      else v.pause();
+    }
+  }
+})
+</script>
 </body>
 </html>

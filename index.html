@@ -72,16 +72,10 @@
   <div class="product-grid" id="productGrid">
 
     <!-- ===== Building & Construction ===== -->
-    <div class="product-card" data-category="building">
-  <div class="product-media" style="position:relative;overflow:hidden;cursor:pointer;" onclick="this.classList.toggle('active');const v=this.querySelector('video');if(this.classList.contains('active')){v.play();}else{v.pause();}">
+   <div class="product-card" data-category="building">
+  <div class="product-media" style="position:relative;overflow:hidden;cursor:pointer;">
     <img class="card-img" src="images/canopy01.jpg" alt="Aluminum Alloy Canopy" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;transition:opacity 0.3s;">
     <video class="card-video" src="videos/canopy.mp4" muted loop playsinline webkit-playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.3s;"></video>
-    <style>
-      .product-media:hover .card-img,
-      .product-media.active .card-img{opacity:0;}
-      .product-media:hover .card-video,
-      .product-media.active .card-video{opacity:1;}
-    </style>
   </div>
   <div class="product-body">
     <span class="product-tag">Building &amp; Construction</span>
